@@ -1,10 +1,14 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+// import { quiz } from 'reducers/quiz';
 
 export const Summary = () => {
+    const answers = useSelector((state) => state.quiz.answers)
+    const rightAnswers = answers.filter(answer => answer.isCorrect === true)
+    console.log(answers.length)
     return (
    
-        <h1>Mushroom Quiz!</h1>
+        <h1>Your score: {rightAnswers.length} / {answers.length}</h1>
   
     )
 }

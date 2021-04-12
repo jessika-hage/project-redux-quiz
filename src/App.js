@@ -5,7 +5,6 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { quiz } from 'reducers/quiz';
 
 import { Home } from './pages/Home'
-import { Confirm } from './pages/Confirm';
 import { Summary } from './pages/Summary';
 import { QuestionPage } from './pages/QuestionPage';
 
@@ -26,9 +25,6 @@ export const App = () => {
             </Route>
             <Route path='/QuestionPage/'>
               <QuestionPage />
-            </Route>
-            <Route path='/Confirm'>
-              <Confirm/>
             </Route>
             <Route path='/Summary'>
               <Summary />

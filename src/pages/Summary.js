@@ -1,8 +1,7 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { quiz } from 'reducers/quiz';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import { RestartButton } from 'components/RestartButton'
+import { RestartButton } from 'components/RestartButton';
 
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers);
@@ -12,28 +11,39 @@ export const Summary = () => {
   );
   console.log(rightAnswers);
   return (
-    <section className="main-container">
-      <div className="summary-container">
+    <section className='main-container'>
+      <div className='summary-container'>
         {answers.map((option) => (
-          <div key={option.id} className="summary-answer-wrapper">
+          <div key={option.id} className='summary-answer-wrapper'>
             <img
-              className="summary-image"
+              className='summary-image'
               src={require(`../assets/${option.questionImage}`)}
-              alt="mushroom"
+              alt='mushroom'
             />
-            <div className="score-text-wrapper">
-              <p className="right-score">
-              <span className="score-bold"> Correct Answer was:</span> {option.correctAnswer}
+            <div className='score-text-wrapper'>
+              <p className='right-score'>
+                <span className='score-bold'> Correct Answer was:</span>{' '}
+                {option.correctAnswer}
               </p>
-              <p className="your-score"> <span className="score-bold"> Your Answer was:</span>  <span className={option.answer === option.correctAnswer ? "green" : "red"}>{option.answer}</span></p>
+              <p className='your-score'>
+                {' '}
+                <span className='score-bold'> Your Answer was:</span>{' '}
+                <span
+                  className={
+                    option.answer === option.correctAnswer ? 'green' : 'red'
+                  }
+                >
+                  {option.answer}
+                </span>
+              </p>
             </div>
           </div>
         ))}
         <div>
-        <h1 className="summary-text">
-          Your score: {rightAnswers.length} / {answers.length}
-        </h1>
-        <RestartButton />
+          <h1 className='summary-text'>
+            Your score: {rightAnswers.length} / {answers.length}
+          </h1>
+          <RestartButton />
         </div>
       </div>
     </section>

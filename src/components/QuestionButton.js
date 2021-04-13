@@ -16,12 +16,12 @@ export const QuestionButton = () => {
       {!quizOver &&
         (questionIndex === questions.length - 1 ? (
           <Link to="/Summary"> 
-            <button>
+            <button className="next-button">
                 Submit?
             </button>
           </Link>
         ) : (
-          <button onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
+          <button className="next-button" onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
             Next Question
           </button>
         )

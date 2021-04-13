@@ -2,18 +2,21 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016' ], correctAnswerIndex: 2 },
-  { id: 3, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin'], correctAnswerIndex: 0 },
-  { id: 4, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016'], correctAnswerIndex: 2 },
-  { id: 5, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay'], correctAnswerIndex: 0 },
+  { id: 1, questionText: 'This one is actually really delicate but what is it named?', options: ['Hippospongia', 'Cauliflower', 'Air head'], correctAnswerIndex: 1, image: 'blomkalssvamp.webp'},
+  { id: 2, questionText: 'This chubby fellow is known to cause gastrointestinal symptoms of diarrhoea and violent vomiting so don’t eat it! But what is its name?', options: ['Satans Bolete', 'The Read Threat', 'Fly Agaric' ], correctAnswerIndex: 0, image: 'djavulssopp.jpeg'},
+  { id: 3, questionText: 'This is a penny bun. The fruit body has a large browncapwhich on occasion can reach:', options: ['15cm in diameter and 1kg', '50 cm in diameter and 5kg', '35cm in diameter and 3kg'], correctAnswerIndex: 2, image: 'kulli-kittus-gtdyJQqCzsA-unsplash.jpg' },
+  { id: 4, questionText: 'This is an orange milkcap also called false saffron milkcap. This mushroom stains a deep green color when handled. When fresh, the mushroom exudes an orange-red latex or "milk" that does not change color. But can you eat it?', options: ['Yes! It’s delicious!', 'No! Not if you want to live!', 'Well, it won’t kill you, but it tastes like sweaty feet.'], correctAnswerIndex: 0, image: 'blodriska2.jpg' },
+  { id: 5, questionText: 'This one is a parasol mushroom and...', options: ['It’s very tasty and you can fry it as a steak!', 'It’s very poisonous, its’ poison effect the nerve system'], correctAnswerIndex: 0, image: 'stoltfjallskivling.jpeg' },
+  { id: 6, questionText: 'And this one is a panther cap...', options: ['It’s very tasty and you can fry it as a steak!', 'It’s very poisonous, its’ poison effect the nerve system'], correctAnswerIndex: 1, image: 'panterflnckig-flugsvamp.jpeg' },
 ]
 
 const initialState = {
   questions,
   answers: [],
   currentQuestionIndex: 0,
-  quizOver: false
+  quizOver: false,
+  progress: 16.66,
+  disabled: false,
 }
 
 export const quiz = createSlice({
@@ -39,6 +42,8 @@ export const quiz = createSlice({
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload
       const question = state.questions.find((q) => q.id === questionId)
+      state.disabled = true
+  
 
       if (!question) {
         throw new Error('Could not find question! Check to make sure you are passing the question id correctly.')
@@ -69,6 +74,7 @@ export const quiz = createSlice({
         state.quizOver = true
       } else {
         state.currentQuestionIndex += 1
+        state.progress += 16.66;
       }
     },
 

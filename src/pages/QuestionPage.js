@@ -4,7 +4,8 @@ import { CurrentQuestion } from 'components/CurrentQuestion';
 
 export const QuestionPage = () => {
 return (
-    
-    <CurrentQuestion />
+    <main className="main-container">
+          <CurrentQuestion />
+    </main>
 )
 }

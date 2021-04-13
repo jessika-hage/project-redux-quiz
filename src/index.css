@@ -42,9 +42,18 @@ code {
 }
 
 @keyframes title {
-  0% {opacity: 0; transform: scale(0.1)}
-  70% {opacity: 0; transform: scale(0.1)}
-  100% {opacity: 1; transform: scale(1)}
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .start-button {
@@ -62,10 +71,24 @@ code {
   color: #845460;
 }
 
+button[disabled] {
+  opacity: 0.4;
+  cursor: auto;
+}
+
 @keyframes button {
-  0% {opacity: 0; transform: scale(0.1)}
-  70% {opacity: 0; transform: scale(0.1)}
-  100% {opacity: 1; transform: scale(1)}
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .background-image {
@@ -91,24 +114,40 @@ code {
 }
 
 @keyframes image {
-  from {opacity: 0; transform: scale(0.1)}
-  to {opacity: 0.6; transform: scale(1)}
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 0.6;
+    transform: scale(1);
+  }
 }
 
-
 /* Question Page */
-.main-container {
+.main-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.main-image {
   height: 100%;
+  background-image: url("./assets/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .question-title {
   text-align: center;
   font-size: 22px;
-  margin: 20px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 /* Progress bar, question counter */
@@ -120,6 +159,11 @@ code {
   border: 4px solid #ead3cb;
   padding: 10px;
   margin: 10px;
+  background-color: black;
+}
+
+.image-answer {
+  margin: 20px 0;
 }
 
 .progress-container {
@@ -128,7 +172,7 @@ code {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 10px 0;
 }
 
 .progress-bar {
@@ -176,17 +220,17 @@ button {
   font-family: "Ubuntu";
   font-size: 18px;
   padding: 15px;
-}
+}</
 
-.options-button:hover {
+.options-button:hover:enabled {
   opacity: 0.7;
 }
 
-.options-button:focus {
+.options-button:active {
   outline: 2px solid #845460;
 }
 
-.next-button {
+.next-button, .restart-button {
   width: 100%;
   color: #ead3cb;
   background-color: #5b252d;
@@ -196,32 +240,77 @@ button {
   margin: 10px 0;
 }
 
-.next-button:hover {
+.restart-button:hover {
+  background-color: #ead3cb;
+  color: #5b252d;
+}
+
+.next-button:hover:enabled {
   background-color: #ead3cb;
   color: #5b252d;
 }
 
 /* Summary Page */
-.summary-container {
+.main-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.summary-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
   border: 5px solid #ead3cb;
-  padding: 10px;
+  padding: 30px;
   margin: 10px;
+  max-width: 800px;
 }
 
 .summary-text {
   font-size: 28px;
 }
 
+.summary-answer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+}
+
+.summary-image {
+  width: 80px;
+  margin: 10px 0;
+}
+
+.score-text-wrapper {
+  margin: 0 20px;
+}
+
+.right-score {
+  margin: 5px;
+}
+
+.your-score {
+  margin: 5px;
+}
+
+.score-bold {
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  margin: 0 5px;
+}
+
+.green {
+  color: green;
+  margin: 0 5px;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
-  .background-image {
-    
-  }
-
   .main-container {
     height: 100vh;
   }
@@ -252,7 +341,7 @@ button {
   .progress-bar {
     width: 90%;
   }
-  
+
   .question-count {
     font-size: 22px;
   }

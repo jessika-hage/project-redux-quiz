@@ -36,14 +36,14 @@ export const Home = () => {
       />
       <img
         className='background-image'
-        src='https://images.unsplash.com/photo-1454425064867-5ba516caf601?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-        alt='mushrooms'
+        src='https://images.unsplash.com/photo-1571590900195-9b7c3c289824?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
       />
       <img
         className='background-image'
-        src='https://images.unsplash.com/photo-1569108891320-de8f5b7723b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+        src='https://images.unsplash.com/photo-1454425064867-5ba516caf601?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
         alt='mushrooms'
       />
+
       <div class='homescreen-box'>
         <h1 className='title'>How much do you know about mushrooms?</h1>
         <Link to='/QuestionPage'>

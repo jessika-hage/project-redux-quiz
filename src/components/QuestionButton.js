@@ -1,7 +1,7 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { quiz } from "../reducers/quiz";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { quiz } from '../reducers/quiz';
+import { Link } from 'react-router-dom';
 
 export const QuestionButton = ({ disabled }) => {
   const questionIndex = useSelector((state) => state.quiz.currentQuestionIndex);
@@ -14,8 +14,8 @@ export const QuestionButton = ({ disabled }) => {
     <>
       {!quizOver &&
         (questionIndex === questions.length - 1 ? (
-          <Link to="/Summary">
-            <button className="next-button">Submit?</button>
+          <Link to='/Summary'>
+            <button className='next-button'>Submit?</button>
           </Link>
         ) : (
           <button

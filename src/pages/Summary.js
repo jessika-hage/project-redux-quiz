@@ -1,19 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { RestartButton } from 'components/RestartButton'
+import { RestartButton } from 'components/RestartButton';
 
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers);
   const rightAnswers = answers.filter((answer) => answer.isCorrect === true);
 
   return (
-    <section className="main-container">
-      <div className="summary-container">
+    <section className='main-container'>
+      <div className='summary-container'>
         {answers.map((option) => (
-          <div key={option.id} className="summary-answer-wrapper">
+          <div key={option.id} className='summary-answer-wrapper'>
             <img
-              className="summary-image"
+              className='summary-image'
               src={require(`../assets/${option.questionImage}`)}
               alt="mushroom" />
             <div className="score-text-wrapper">

@@ -1,17 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-color: black;
   color: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -63,7 +63,7 @@ code {
   width: fit-content;
   animation: button 2.6s linear;
   color: #ead3cb;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .start-button:hover {
@@ -139,7 +139,7 @@ button[disabled] {
 
 .main-image {
   height: 100%;
-  background-image: url("./assets/forest.jpg");
+  background-image: url('./assets/forest.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -218,7 +218,7 @@ button {
   margin: 3px 0;
   background-color: #2b4f60;
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   padding: 12px;
 }
@@ -231,11 +231,12 @@ button {
   outline: 2px solid #845460;
 }
 
-.next-button, .restart-button {
+.next-button,
+.restart-button {
   width: 100%;
   color: #ead3cb;
   background-color: #5b252d;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu';
   font-size: 20px;
   padding: 20px;
   margin: 10px 0;

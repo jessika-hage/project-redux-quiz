@@ -21,8 +21,7 @@ export const QuestionButton = ({ disabled }) => {
           <button
             disabled={disabled}
             className="next-button"
-            onClick={() => dispatch(quiz.actions.goToNextQuestion())}
-          >
+            onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
             Next Question
           </button>
         ))}

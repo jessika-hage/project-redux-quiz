@@ -144,13 +144,7 @@ button[disabled] {
   background-size: cover;
 }
 
-.question-title {
-  text-align: center;
-  font-size: 22px;
-  margin: 10px 10px 10px 10px;
-}
-
-/* Progress bar, question counter */
+/* Card with question */
 .question-card-container {
   display: flex;
   flex-direction: column;
@@ -158,21 +152,40 @@ button[disabled] {
   align-items: center;
   border: 4px solid #ead3cb;
   padding: 10px;
-  margin: 10px;
+  margin: 30px 10px 5px 10px;
   background-color: black;
 }
 
+.question-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Image and answer options */
 .image-answer {
   margin: 20px 0;
 }
 
+.card-image {
+  width: 100%;
+  margin: 3px 0;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Progress bar, question counter */
 .progress-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 5px 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .progress-bar {
@@ -193,18 +206,6 @@ button[disabled] {
   margin: 0;
 }
 
-/* Image and answer options */
-.card-image {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.options-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 /* Buttons */
 button {
   border: none;
@@ -217,10 +218,10 @@ button {
   margin: 3px 0;
   background-color: #2b4f60;
   color: white;
-  font-family: "Ubuntu";
-  font-size: 18px;
-  padding: 15px;
-}</
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  padding: 12px;
+}
 
 .options-button:hover:enabled {
   opacity: 0.7;
@@ -234,7 +235,7 @@ button {
   width: 100%;
   color: #ead3cb;
   background-color: #5b252d;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   padding: 20px;
   margin: 10px 0;
@@ -256,18 +257,15 @@ button {
   justify-content: center;
   align-items: center;
 }
+
 .summary-container {
   background-color: black;
   display: flex;
   flex-direction: column;
   border: 5px solid #ead3cb;
-  padding: 30px;
+  padding: 10px;
   margin: 10px;
   max-width: 800px;
-}
-
-.summary-text {
-  font-size: 28px;
 }
 
 .summary-answer-wrapper {
@@ -275,16 +273,16 @@ button {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid white;
-  margin-top: 10px;
 }
 
 .summary-image {
-  width: 80px;
+  width: 90px;
   margin: 10px 0;
 }
 
 .score-text-wrapper {
-  margin: 0 20px;
+  margin: 0 10px;
+  font-size: 12px;
 }
 
 .right-score {
@@ -309,6 +307,10 @@ button {
   margin: 0 5px;
 }
 
+.summary-text {
+  font-size: 24px;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .main-container {
@@ -323,6 +325,7 @@ button {
   .question-card-container {
     padding: 20px;
     width: 700px;
+    margin: 10px;
   }
 
   .image-answer {
@@ -355,6 +358,19 @@ button {
   .next-button {
     padding: 25px;
     font-size: 24px;
+  }
+
+  .summary-container {
+    padding: 30px;
+  }
+
+  .score-text-wrapper {
+    margin: 0 20px;
+    font-size: 16px;
+  }
+
+  .summary-text {
+    font-size: 28px;
   }
 }
 

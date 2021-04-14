@@ -12,7 +12,7 @@ const questions = [
     id: 2,
     questionText:
       "This chubby fellow is known to cause gastrointestinal symptoms of diarrhoea and violent vomiting so don’t eat it! But what is its name?",
-    options: ["Satans Bolete", "The Read Threat", "Fly Agaric"],
+    options: ["Satans Bolete", "The Red Threat", "Fly Agaric"],
     correctAnswerIndex: 0,
     image: "djavulssopp.jpeg",
   },
@@ -67,8 +67,8 @@ const initialState = {
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false,
-  progress: 0,
-  disabled: false,
+  progress: 0,/* Added by us for the Progress bar*/
+  disabled: false,/* Added by us for the buttons*/
 };
 
 export const quiz = createSlice({

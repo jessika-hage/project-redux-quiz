@@ -4,10 +4,10 @@ import { useDispatch } from "react-redux";
 import { quiz } from "../reducers/quiz";
 
 export const RestartButton = () => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
    return (
-   <Link to="/">
-    <button className="restart-button" onClick={() => dispatch(quiz.actions.restart())}>Try Again</button>
-  </Link>
+     <Link to="/">
+       <button className="restart-button" onClick={() => dispatch(quiz.actions.restart())}>Try Again</button>
+     </Link>
    )
 }

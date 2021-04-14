@@ -1,12 +1,7 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-unused-vars */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-trailing-spaces */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { quiz } from '../reducers/quiz';
+
 import { QuestionButton } from './QuestionButton';
 import { ProgressBar } from './ProgressBar';
 import { Image } from './Image';
@@ -33,7 +28,6 @@ export const CurrentQuestion = () => {
   return (
     <>
       <section className="question-card-container">
-        
         <h1 className="question-title">{question.questionText}</h1>
         <div className="image-answer">
           <Image />

@@ -36,7 +36,7 @@ export const Home = () => {
       />
       <img
         className='background-image'
-        src='https://images.unsplash.com/photo-1571590900195-9b7c3c289824?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+        src='https://images.unsplash.com/photo-1571590900195-9b7c3c289824?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2hyb29tc3xlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60' alt='mushrooms'
       />
       <img
         className='background-image'
